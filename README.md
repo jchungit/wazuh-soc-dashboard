@@ -52,6 +52,11 @@ This is the v2 of my earlier [home-lab-siem-wazuh](https://github.com/jchungit/h
 - Connects through a dedicated **read-only indexer user** (`readall` backend role) — the dashboard can *see* the data but can't change or delete anything (**principle of least privilege**)
 - Includes a **demo mode** toggle so I can show the dashboard to others without exposing real alerts
 
+### 5. Threat Forecast View *(new)*
+- Built a companion "Threat Forecast" app that presents the same kind of firewall/IPS (Intrusion Prevention System) activity as a **TV weather report** — radar "storm cells" for top attack-origin countries, an auto-written plain-language forecast (most-targeted ports, inbound volume), and a severity-coded ticker
+- Goal: practice **communicating security data to non-technical people**, a core part of SOC work
+- Lives alongside my home lab network dashboard (see [ai-automation-builds](https://github.com/jchungit/ai-automation-builds))
+
 ---
 
 ## 🧯 Problems Solved
@@ -72,6 +77,7 @@ This is the v2 of my earlier [home-lab-siem-wazuh](https://github.com/jchungit/h
 - **Least privilege** — read-only service account for the dashboard
 - **Default credential hygiene** — changing vendor defaults
 - **Defense in depth** — firewall + SIEM + alerting layered together
+- **Security communication** — turning raw counts into a briefing anyone can read
 
 ---
 
